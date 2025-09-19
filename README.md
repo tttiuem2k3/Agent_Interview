@@ -100,9 +100,19 @@ To generate final result messages:
 
 ---
 
-## Sample Email Prompts:
+## 📚 Sample Email Prompts:
 To Candidate:
 "[ASOFT] INVITATION FOR ROUND 2 INTERVIEW. Hello {candidate.FullName}, You have passed the automated interview round for the position of {position.Name}..."
 
 To Leader:
 "[ASOFT] ROUND 2 INTERVIEW SCHEDULE NOTIFICATION. Hello {leader.FullName}, Candidate {candidate.FullName} has passed the automated interview round..."
+
+---
+
+##  📞 Contact
+- 📧 Email: tttiuem2k3@gmail.com
+- 👥 Linkedin: [Thịnh Trần](https://www.linkedin.com/in/thinh-tran-04122k3/)
+- 💬 Zalo / Phone: +84 329966939 | +84 336639775
+
+---
+
