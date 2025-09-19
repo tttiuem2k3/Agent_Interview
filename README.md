@@ -13,7 +13,8 @@ The agent starts by introducing itself as Asoft's automated interview assistant 
 ### 📋 Candidate Information Collection
 The agent asks for the candidate's full name, email, and phone number, then analyzes and stores this information in a database.
 
-### 🎯 Role and Level Selection: The agent presents a list of open positions and asks the candidate to specify the role and experience level (Fresher, Junior, Senior) they are applying for.
+### 🎯 Role and Level Selection
+The agent presents a list of open positions and asks the candidate to specify the role and experience level (Fresher, Junior, Senior) they are applying for.
 
 ### 📄 Dynamic Job Description
 Based on the candidate's selection, the agent retrieves the job description and required skills from the database to present a clear and encouraging summary.
@@ -57,30 +58,37 @@ Backend Language: C#.
 
 ### ✨ Prompt Engineering: A core component of the project, with various techniques used to guide the LLM's behavior.
 
-### 📂 Project Structure
+---
+
+## 📂 Project Structure
 The project is organized into logical layers for easy maintenance and clarity:
 
-### 📁 Domain: Contains core data models (entities) such as Candidate, Position, InterviewSession, and Answer.
+### 📁 Domain
+Contains core data models (entities) such as Candidate, Position, InterviewSession, and Answer.
 
-### 📁 Infrastructure: Manages data access, primarily containing the database context (AgentDbContext.cs).
+### 📁 Infrastructure
+Manages data access, primarily containing the database context (AgentDbContext.cs).
 
-### 📁 Services: Holds the business logic for functions like scoring (ScoringService.cs), scheduling (SchedulingService.cs), and email sending (EmailService.cs).
+### 📁 Services
+Holds the business logic for functions like scoring (ScoringService.cs), scheduling (SchedulingService.cs), and email sending (EmailService.cs).
 
-### 📁 Tools: Includes external utilities, like QuestionBankTool.cs to retrieve interview questions.
+### 📁 Tools
+Includes external utilities, like QuestionBankTool.cs to retrieve interview questions.
 
-### 📁 Agent: The central orchestrating component (AgentOrchestrator.cs) that manages the entire interview flow.
+### 📁 Agent
+The central orchestrating component (AgentOrchestrator.cs) that manages the entire interview flow.
 
 ---
 
 ## 💬 Key Prompts Used
 The agent's intelligence and conversational flow are guided by a set of carefully designed prompts.
 
-## 📜 System Prompt
+### 📜 System Prompt
 This general prompt defines the AI's role, rules, and overall workflow from start to finish.
 
 "You are an automated AI Interview Agent for Asoft company. Communicate naturally, warmly, and professionally; personalize the language based on the context. The process: 1) Short introduction... 2) Ask the user... 3) ...present and ask which position the user wants to apply for... 4) ...friendly exchange about the position description... 5) Interview... 6) Conclusion: calculate the total score... 7) Always maintain a professional attitude..."
 
-🔧 Key Tool and User Prompts
+### 🔧 Key Tool and User Prompts
 To extract candidate information:
 "Extract contact information from the candidate's response. Return a valid JSON with the following fields: { 'name': string, 'email': string, 'phone': string }"
 
@@ -89,6 +97,8 @@ To score answers:
 
 To generate final result messages:
 "Generate a polite, positive concluding remark. If Pass (>=60 points): announce that they passed the interview round and will be scheduled for round 2. If Fail (<60 points): provide subtle feedback, suggesting areas for improvement."
+
+---
 
 ## Sample Email Prompts:
 To Candidate:
