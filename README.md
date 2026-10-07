@@ -2,6 +2,7 @@
 
 > An automated **AI screening interviewer for ASOFT** built with C#/.NET, LLM integration, Entity Framework Core and MySQL.
 
+<p align="center">\n  <img src="./docs/images/readme_overview.svg" width="100%" alt="AI Interview Agent in C# overview">\n</p>\n
 ---
 
 ## 📌 Introduction
